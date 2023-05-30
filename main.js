@@ -1,22 +1,17 @@
-// Language objects containing translations
-const translations = {
-    en: {
-      greeting: 'Hello',
-      farewell: 'Goodbye',
-    },
-    fr: {
-      greeting: 'Bonjour',
-      farewell: 'Au revoir',
-    },
-    es: {
-      greeting: 'Hola',
-      farewell: 'Adiós',
-    },
-  };
-  
-  // Function to change the language
-  function changeLanguage(language) {
-    const greetingElement = document.getElementById('greeting');
-    greetingElement.innerText = translations[language].greeting;
-  }
-  
+let delivery = document.getElementById("delivery")
+let pickup = document.getElementById("pickup")
+
+
+delivery.onclick = function(){
+    pickup.classList.add("second")
+    pickup.classList.remove("first")
+    delivery.classList.add("first")
+    delivery.classList.remove("second")
+}
+
+pickup.onclick = function(){
+    pickup.classList.add("first")
+    pickup.classList.remove("second")
+    delivery.classList.add("second")
+    delivery.classList.remove("first")
+}

@@ -1,53 +1,51 @@
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-  }
-  
-  .login-container {
-    margin: 0 auto;
-    width: 400px;
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  input {
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    border: none;
+body{
+  background: linear-gradient(97.86deg, #FFBA26 -8.95%, #FF9A0E 109.24%);
+}
+
+.container {
+  color: #fcbd37;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+button {
+  color: yellow;
+  width: 100%;
+  padding: 10px;
+  background-color: #F17228;
+  color: white;
+  border: none;
+}
+
+#mainn{
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  max-width: 200px;
+  padding: 15px 30px;
     color: white;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3e8e41;
-  }
-  
-  button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-  }
+    background-color: #F17228;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  text-decoration: none;
+}

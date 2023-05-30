@@ -1,33 +1,46 @@
-const form = document.querySelector('form');
-const usernameInput = document.querySelector('#username');
-const passwordInput = document.querySelector('#password');
-const loginButton = document.querySelector('#login-button');
+// Get login form and attach event listener
+const loginForm = document.getElementById('loginForm');
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get input values
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
 
-// Disable the login button initially
-loginButton.disabled = true;
-
-// Enable the login button if both inputs have a value
-form.addEventListener('input', () => {
-  if (usernameInput.value && passwordInput.value) {
-    loginButton.disabled = false;
-  } else {
-    loginButton.disabled = true;
+  if (!username || !password) {
+    alert('Please enter username and password');
+    return;
   }
+
+
+  // log the values to the console
+  console.log('Login:', username, password);
+
+  // Clear input fields
+  document.getElementById('loginUsername').value = '';
+  document.getElementById('loginPassword').value = '';
 });
 
-// Handle form submission
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+// Get signup form and attach event listener
+const signupForm = document.getElementById('signupForm');
+signupForm.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-  const username = usernameInput.value;
-  const password = passwordInput.value;
 
-  // Check if username and password are correct (replace with your own logic)
-  if (username === 'admin' && password === 'password') {
-    alert('Login successful!');
-    // Redirect to another page (replace with your own logic)
-    window.location.href = 'dashboard.html';
-  } else {
-    alert('Invalid username or password.');
+  const username = document.getElementById('signupUsername').value;
+  const password = document.getElementById('signupPassword').value;
+
+
+  if (!username || !password) {
+    alert('Please enter username and password');
+    return;
   }
+
+
+  //  log the values to the console
+  console.log('Signup:', username, password);
+
+  // Clear input fields
+  document.getElementById('signupUsername').value = '';
+  document.getElementById('signupPassword').value = '';
 });
